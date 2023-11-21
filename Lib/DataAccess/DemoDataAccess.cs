@@ -20,7 +20,7 @@ public class DemoDataAccess : IDataAccess
         return _people;
     }
 
-    public PersonModel InsertPerson(string firstName, string lastName)
+    public PersonModel CreatePerson(string firstName, string lastName)
     {
         var person = new PersonModel
         {
@@ -35,6 +35,6 @@ public class DemoDataAccess : IDataAccess
 
 public interface IDataAccess
 {
-    PersonModel InsertPerson(string firstName, string lastName);
+    PersonModel CreatePerson(string firstName, string lastName);
     List<PersonModel> GetPeople();
 }
