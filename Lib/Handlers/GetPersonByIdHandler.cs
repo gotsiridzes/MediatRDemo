@@ -18,7 +18,7 @@ public class GetPersonByIdHandler : IRequestHandler<GetPersonByIdQuery, PersonMo
     {
         var result = await _mediator.Send(new GetPersonListQuery());
         var output = result.FirstOrDefault(x => x.Id == request.Id);
-        
+
         if (output != null)
             return output;
 
